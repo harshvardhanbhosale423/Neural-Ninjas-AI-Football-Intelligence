@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: neural-ninjas-hackathon
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/status
+    envVars:
+      - key: NODE_ENV
+        value: production
